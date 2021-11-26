@@ -62,3 +62,21 @@ Addition methods provide us with more options now:
 >>> n.full_name()
 'Alison Major'
 ```
+
+## Admin
+
+Create a superuser.
+
+```shell
+python manage.py createsuperuser
+```
+
+Follow the prompts.
+
+Now start the development server again.
+
+```shell
+python manage.py runserver
+```
+
+Navigate to http://127.0.0.1:8000/admin/
