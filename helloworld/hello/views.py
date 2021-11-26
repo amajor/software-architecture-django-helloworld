@@ -11,4 +11,8 @@ def index(request):
 
 
 def person(request, name_id):
-    return HttpResponse("Hello %s!" % Name.objects.get(id=name_id))
+    template = loader.get_template('hello/person.html')
+    context = {
+        'name': Name.objects.get(id=name_id),
+    }
+    return HttpResponse(template.render(context, request))

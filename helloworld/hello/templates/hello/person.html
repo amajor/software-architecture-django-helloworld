@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Person!</title>
+</head>
+<body>
+    <h1>Lab 5 - Individual</h1>
+    {% if name %}
+        <p>
+            <strong>Greetings, {{ name.first_name }}!</strong>
+        </p>
+        <ul>
+            <li>id: {{ name.id }}</li>
+            <li>full_name: {{ name.full_name }}</li>
+            <li>first_name: {{ name.first_name }}</li>
+            <li>last_name: {{ name.last_name }}</li>
+        </ul>
+    {% else %}
+        <p>
+            <strong>Hello world!</strong>
+        </p>
+    {% endif %}
+</body>
+</html>
