@@ -1,18 +1,15 @@
-from django.http import HttpResponse
-from django.template import loader
+from django.shortcuts import render
 
 from .models import Name
 
 
 def index(request):
-    template = loader.get_template('hello/index.html')
     context = {}
-    return HttpResponse(template.render(context, request))
+    return render(request, 'hello/index.html', context)
 
 
 def person(request, name_id):
-    template = loader.get_template('hello/person.html')
     context = {
         'name': Name.objects.get(id=name_id),
     }
-    return HttpResponse(template.render(context, request))
+    return render(request, 'hello/person.html', context)
