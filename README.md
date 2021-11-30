@@ -24,6 +24,12 @@ Then open your browser at the address http://127.0.0.1:8000/hello/
 
 You should get a rendered web page.
 
+### For a Personal Greeting
+
+If there is a person's name stored in the database, you can view the greeting for that person.
+
+http://127.0.0.1:8000/hello/1/
+
 ---
 
 # Admin
@@ -81,7 +87,7 @@ Addition methods provide us with more options now:
 'Alison Major'
 ```
 
-## Admin
+## Admin Users
 
 Create a superuser.
 
